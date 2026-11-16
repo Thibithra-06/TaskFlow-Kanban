@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - Kanban Workspace</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+
+        <div class="logo">
+            <h1>TaskFlow</h1>
+            <p>Collaborative Sprint & Kanban Workspace</p>
+        </div>
+
+        <div class="header-info">
+            <span>My Workspace</span>
+        </div>
+
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <!-- Add Task Section -->
+        <section class="add-task-section">
+
+            <div>
+                <h2>My Kanban Board</h2>
+                <p>Organize your work and track your progress.</p>
+            </div>
+
+            <form class="task-form" id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                >
+
+                <select id="priorityInput">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+
+                <button type="submit">+ Add Task</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Kanban Board -->
+        <section class="kanban-board">
+
+            <!-- To Do Column -->
+            <div class="column">
+
+                <div class="column-header">
+                    <h3>To Do</h3>
+                    <span class="task-count">(2)</span>
+                </div>
+
+                <div class="task-list">
+
+                    <div class="task-card">
+
+                        <h4 class="task-title">Design Homepage</h4>
+
+                        <span class="priority-high">High</span>
+
+                        <p class="due-date">Due: 20 Nov 2026</p>
+
+                    </div>
+
+                    <div class="task-card">
+
+                        <h4 class="task-title">Create Project Structure</h4>
+
+                        <span class="priority-medium">Medium</span>
+
+                        <p class="due-date">Due: 22 Nov 2026</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- In Progress Column -->
+            <div class="column">
+
+                <div class="column-header">
+                    <h3>In Progress</h3>
+                    <span class="task-count">(2)</span>
+                </div>
+
+                <div class="task-list">
+
+                    <div class="task-card">
+
+                        <h4 class="task-title">Develop Login Page</h4>
+
+                        <span class="priority-high">High</span>
+
+                        <p class="due-date">Due: 24 Nov 2026</p>
+
+                    </div>
+
+                    <div class="task-card">
+
+                        <h4 class="task-title">Build Dashboard UI</h4>
+
+                        <span class="priority-low">Low</span>
+
+                        <p class="due-date">Due: 26 Nov 2026</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Done Column -->
+            <div class="column">
+
+                <div class="column-header">
+                    <h3>Done</h3>
+                    <span class="task-count">(2)</span>
+                </div>
+
+                <div class="task-list">
+
+                    <div class="task-card">
+
+                        <h4 class="task-title">Initialize Git Repository</h4>
+
+                        <span class="priority-medium">Medium</span>
+
+                        <p class="due-date">Due: 15 Nov 2026</p>
+
+                    </div>
+
+                    <div class="task-card">
+
+                        <h4 class="task-title">Create HTML Files</h4>
+
+                        <span class="priority-low">Low</span>
+
+                        <p class="due-date">Due: 16 Nov 2026</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

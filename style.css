@@ -1,0 +1,291 @@
+/* ------------------------------
+   TaskFlow - Main Styles
+-------------------------------- */
+
+:root {
+    --primary: #635bdb;
+    --primary-light: #eeecff;
+    --background: #f5f6fa;
+    --surface: #ffffff;
+    --text-dark: #25263a;
+    --text-muted: #88899a;
+    --border: #e9eaf0;
+
+    --high-bg: #ffe8e8;
+    --high-text: #dc4545;
+
+    --medium-bg: #fff2d9;
+    --medium-text: #bd821b;
+
+    --low-bg: #e3f7ec;
+    --low-text: #28965a;
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+    background: var(--surface);
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+.logo p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.header-info {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 10px 18px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Main Container */
+
+.main-container {
+    max-width: 1450px;
+    margin: auto;
+    padding: 40px 5%;
+}
+
+/* Add Task Section */
+
+.add-task-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.add-task-section h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.add-task-section p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.task-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.task-form input,
+.task-form select {
+    height: 43px;
+    padding: 0 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    outline: none;
+    font-size: 13px;
+}
+
+.task-form input {
+    width: 210px;
+}
+
+.task-form input:focus,
+.task-form select:focus {
+    border-color: var(--primary);
+}
+
+.task-form button {
+    height: 43px;
+    padding: 0 19px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.task-form button:hover {
+    background: #5048c4;
+    transform: translateY(-2px);
+}
+
+/* Kanban Board */
+
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+/* Columns */
+
+.column {
+    background: #eef0f6;
+    border-radius: 13px;
+    padding: 17px;
+    min-height: 430px;
+}
+
+.column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding: 3px 2px;
+}
+
+.column-header h3 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.task-count {
+    background: white;
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* Task Cards */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.task-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 17px;
+    box-shadow: 0 3px 10px rgba(30, 35, 70, 0.035);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(30, 35, 70, 0.08);
+}
+
+.task-title {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 13px;
+    font-weight: 650;
+}
+
+/* Priority Labels */
+
+.priority-high,
+.priority-medium,
+.priority-low {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.priority-high {
+    background: var(--high-bg);
+    color: var(--high-text);
+}
+
+.priority-medium {
+    background: var(--medium-bg);
+    color: var(--medium-text);
+}
+
+.priority-low {
+    background: var(--low-bg);
+    color: var(--low-text);
+}
+
+/* Due Date */
+
+.due-date {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 15px;
+    padding-top: 11px;
+    border-top: 1px solid var(--border);
+}
+
+/* Responsive Design */
+
+@media (max-width: 950px) {
+    .kanban-board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        padding: 18px 5%;
+    }
+
+    .main-container {
+        padding: 28px 5%;
+    }
+
+    .add-task-section {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .task-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-form input,
+    .task-form select,
+    .task-form button {
+        width: 100%;
+    }
+
+    .kanban-board {
+        grid-template-columns: 1fr;
+    }
+
+    .column {
+        min-height: 250px;
+    }
+}
