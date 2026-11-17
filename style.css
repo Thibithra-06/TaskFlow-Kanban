@@ -238,6 +238,7 @@ body {
     color: var(--low-text);
 }
 
+
 /* Due Date */
 
 .due-date {
@@ -288,4 +289,37 @@ body {
     .column {
         min-height: 250px;
     }
+}
+/* Delete Task Button */
+
+.delete-task-btn {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.delete-task-btn:hover {
+    background-color: #d9363e;
+}
+/* Move Task Button */
+
+.move-task-btn {
+    background-color: #6257d9;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.move-task-btn:hover {
+    background-color: #4940b5;
 }
